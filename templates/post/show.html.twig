@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success" role="alert">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>  {{ message }}
+            </div>
+        {% endfor %}
+
+        <div class="d-flex justify-content-between">
+            <h1>{{ post.title }}</h1>
+            <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-lg btn-block btn-success">
+                <i class="fa fa-edit" aria-hidden="true"></i> {{ 'Edit post' }}
+            </a>
+        </div>
+
+        <div class="rline my-4 m-b-0">
+            {{ post.message}}
+        </div>
+
+        <a href="{{ path('comment_new', {'id': post.id}) }}" class="btn btn-secondary">
+            <i class="fa fa-plus" aria-hidden="true"></i> {{ 'Add comment' }}
+        </a>
+
+        <a href="{{ path('post_index') }}" class="btn btn-secondary">
+            <i class="fa fa-backward" aria-hidden="true"></i> {{ 'Back' }}
+        </a>
+
+        <div class="my-4">
+            <h3 class="my-4">
+                <i class="fa fa-comments" aria-hidden="true"></i> {{ post.comments|length }} Comments
+            </h3>
+            {% for comment in post.comments %}
+                <div class="row my-3">
+                    <div class="col-sm-2">
+                        <span>Published by </span> <strong>{{ comment.name }}</strong>
+                        <p> at {{ comment.publishedAt|date('d-m-Y H:i')}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        {{ comment.message }}
+                    </div>
+                </div>
+            {% else %}
+                <div>
+                    <p>no comments for this post</p>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('warning') %}
+        <div class="alert alert-warning" role="alert">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>  {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>  {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('info') %}
+        <div class="alert alert-success" role="alert">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>  {{ message }}
+        </div>
+    {% endfor %}
+    <div class="d-flex justify-content-between">
+
+        <h1>Posts</h1>
+
+        <a href="{{ path('post_new') }}" class="btn btn-lg btn-block btn-success">
+            <i class="fa fa-plus" aria-hidden="true"></i> {{ 'Create new post' }}
+        </a>
+    </div>
+
+    {% for post in posts %}
+        <div class="my-5 overflow-hidden">
+            <h2 class="d-flex justify-content-center">
+                <a href="{{ path('post_show', {'id': post.id}) }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <div class=" rline row d-flex justify-content-right mx-2">
+                {{ post.message}}
+            </div>
+        </div>
+    {% else %}
+            <span colspan="4">no posts found</span>
+    {% endfor %}
+
+
+
+{% endblock %}

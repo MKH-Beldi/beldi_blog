@@ -1,0 +1,46 @@
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;"
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.rline{
+    white-space: pre-line
+}
+
+.tarea{
+
+    resize: vertical;
+    overflow: auto;
+    box-sizing:border-box;
+    display:block;
+    max-width:100%;
+    line-height:1.5;
+    padding:15px 15px 30px;
+    border-radius:3px;
+    border:1px solid #F7E98D;
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    background:linear-gradient(#F9EFAF, #F7E98D);
+    background:-o-linear-gradient(#F9EFAF, #F7E98D);
+    background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+    background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+    background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+}

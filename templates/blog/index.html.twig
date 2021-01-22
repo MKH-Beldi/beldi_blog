@@ -1,0 +1,193 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Beldi Blog{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('build/css/home.css') }}">{% endblock %}
+
+{% block body %}
+    <h1>Welcome to BELDI Blog</h1>
+
+    <div class="container d-flex align-items-start mt-5">
+
+            <div class="container col-lg-4 text-center d-grid gap-5">
+
+                <div class="my-4">
+                    <img src="{{ asset("img/profile.jpeg") }}" alt="Image Khalil" class="rounded-circle">
+                </div>
+
+                <div class="my-4">
+                    <h1>Mohamad Khalil Beldi</h1>
+                    sysadmin
+                </div>
+
+                <div class="px-5 list-group-item list-group-item-action list-group-item-dark">
+                    <h4><i class="fa fa-user" aria-hidden="true"></i> PROFILE</h4>
+                    <p>Après plus de 4 ans d’expérience dans une DSI, je poursuis mes études d'ingénieur pour des meilleures options de carrière.</p>
+                </div>
+
+                <div class="my-4">
+                    <h3><i class="fa fa-info" aria-hidden="true"></i> CONTACT</h3>
+                    <ul class="list-unstyled">
+                        <li class="my-2"> <i class="fa fa-mobile" aria-hidden="true"></i>  22 925 007</li>
+                        <li class="my-2"> <i class="fa fa-home" aria-hidden="true"></i> Khaznadar, Le Bardo, Tunis</li>
+                        <li class="my-2"> <i class="fa fa-envelope" aria-hidden="true"></i> mohamadkhalil.beldi@esprit.tn</li>
+                        <li class="my-2"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> mohamad-khalil-beldi-083863a8</li>
+                    </ul>
+                </div>
+
+                <div class="my-4">
+                    <h4><i class="fa fa-cogs" aria-hidden="true"></i> SOFT SKILLS</h4>
+
+                    <div class="d-grid gap-3 px-5">
+                        <span class="d-block">ANALYSE & SYNTHÈSE</span>
+                        <input type="range" min="1" max="100" value="75" disabled>
+                        <span class="d-block">AUTONOMIE</span>
+                        <input type="range" min="1" max="100" value="85" disabled>
+                        <span class="d-block">SENS RELATIONNEL</span>
+                        <input type="range" min="1" max="100" value="70" disabled list="tickmarks">
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <h4><i class="fa fa-language" aria-hidden="true"></i> LANGUES</h4>
+                    <ul class="list-unstyled">
+                        <li class="my-2"> Arabe </li>
+                        <li class="my-2"> Français</li>
+                        <li class="my-2"> Anglais</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="container col-8 mt-5">
+                <div class="row my-5">
+                    <div class="col-6 list-group-item list-group-item-action list-group-item-success">
+                        <h2><i class="fa fa-globe" aria-hidden="true"></i> {{ "experiences" | upper  }}</h2>
+                    </div>
+                </div>
+                <div class="row d-block d-grid gap-2 mx-2">
+                    <h4>{{ "Technicien supérieur système d'information" | upper }}</h4>
+                    <h5><i class="fa fa-building-o" aria-hidden="true"></i>{{ " Ulysse Hyper Distribution" }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> Octobre 2016 - Juillet 2019</span>
+                    <ul>
+                        <li>Diagnostiquer et Traiter les demandes d’actif IT soumis par les utilisateurs du SI.</li>
+                        <li>Acquirir les matériels informatiques dans le cadre de satisfaire les demandes des actifs IT et dans le cadre d‘approvisionner le besoin matériel pour les nouveaux projets.</li>
+                        <li>Gérer le cycle de vie des équipements IT mis à disposition des utilisateurs.</li>
+                        <li>Contribuer à la préparation des budgets annuels et mettre en oeuvre des plans de développement et de renouvellement du parc.</li>
+                        <li>Former les techniciens et assister leurs interventions.</li>
+                    </ul>
+                </div>
+                <div class="row d-block d-grid gap-2 mt-5 mx-2">
+                    <h4>{{ "Technicien IT" | upper }}</h4>
+                    <h5><i class="fa fa-building-o" aria-hidden="true"></i>{{ " Ulysse Hyper Distribution" }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> Janvier 2015 - Septembre 2016</span>
+                    <ul class="">
+                        <li>Préparer et intégrer les nouveaux matériels informatique dans l'environnement de production et configurer les ressources logiques et physiques.</li>
+                        <li>Assurer le bon fonctionnement du parc informatique assisté par un GMAO et gérer les maintenances curatives et préventives.</li>
+                        <li>Traiter les demandes des utilisateurs formulées à travers l’Helpdesk et contribuer à la résolution des incidents niv2.</li>
+                        <li>Établir les procédu3es d’installation et de configuration.</li>
+                    </ul>
+                </div>
+                <div class="row d-block d-grid gap-2 mt-5 mx-2">
+                    <h4>{{ "Stage PFE" | upper }}</h4>
+                    <h5><img src="{{ asset("img/icon/ance.png") }}" alt="Image ance">{{ " Agence nationale de certification électronique" }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> Juin 2014</span>
+                    <ul class="">
+                        <li>Mise en place d'une autorité de certification électronique (Public Key Infrastructures) ; ensemble de composants physiques (des ordinateurs, des équipements cryptographiques logiciels ou matériel), de procédures humaines (vérifications, validation) et de logiciels (système et application) destiné à gérer les  certificats électroniques au profit d'une comité d'utilisateurs d'un système.</li>
+                        <li><img src="{{ asset("img/icon/ejbca.png") }}" alt="Image ejbca"> Enterprise JavaBeans Certificate Authority, solution applicative.</li>
+                    </ul>
+                </div>
+
+                <div class="row my-5 ">
+                    <div class="col-6 list-group-item list-group-item-action list-group-item-success">
+                        <h2><i class="fa fa-university" aria-hidden="true"></i> {{ "formations" | upper  }}</h2>
+                    </div>
+                </div>
+                <div class="row mt-4 d-block mx-2">
+                    <h5>{{ "CYCLE INGÉNIEUR - ESPRIT" | upper }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> Septembre 2019 - 2023</span>
+                    <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Cycle ingénieur en informatique (2eme année, cours de soir).</p>
+                </div>
+                <div class="row mt-4 d-block mx-2">
+                    <h5>{{ "LICENCE APPLIQUÉE - ISET’COM" | upper }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i>  Juin 2014</span>
+                    <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Licence appliquée en télécommunication (parcours sécurité des réseaux).</p>
+                </div>
+                <div class="row mt-4 d-block mx-2">
+                    <h5>{{ "BACCALAURÉAT- LYCÉE ALAOUI" | upper }}</h5>
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i>  Juin 2010</span>
+                    <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Baccalauréat sciences mathématiques.</p>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="row my-5 ">
+        <div class="col-4  list-group-item list-group-item-action list-group-item-light">
+            <h2><i class="fa fa-battery-full" aria-hidden="true"></i> {{ " hard skills" | upper  }}</h2>
+        </div>
+        <div class="my-4 text-center">
+            <div class="list-group-item list-group-item-action list-group-item-warning me-5  d-flex justify-content-center">
+                <h4>{{ "System & Networking" }}</h4>
+            </div>
+            <div class="my-5">
+                <ul class="list-unstyled ">
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Administration des postes de travail sous l’environnement Microsoft : Windows 10, Windows server (AD, DNS, DHCP, GPO), SCCM 2012</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/microsoft.png") }}" alt="Image microsoft"> <img src="{{ asset("img/icon/windows.png") }}" alt="Image windows"> <img src="{{ asset("img/icon/sccm.png") }}" alt="Image sccm">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Virtualisation et gestion des backups : ESXI, Xen-Server, Hyper-V, </li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/esxi.png") }}" alt="Image esxi"> <img src="{{ asset("img/icon/xen.png") }}" alt="Image xen"> <img src="{{ asset("img/icon/xeno.png") }}" alt="Image xeno"> <img src="{{ asset("img/icon/windows.png") }}" alt="Image windows">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Système linux CentOS </li>
+                    <div class="my-4">
+                         <img src="{{ asset("img/icon/linux.png") }}" alt="Image linux"> <img src="{{ asset("img/icon/centos.png") }}" alt="Image centos">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Firewalling avec pfSense</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/pfsense.png") }}" alt="Image pfsense">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Connaissances approfondies en Networking et Telecom</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/networking.png") }}" alt="Image networking"> <img src="{{ asset("img/icon/antenna.png") }}" alt="Image antenna">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Connaissances pratiques avec les équipements HP (proliant) et Cisco (catalyst, aironet , Unified IP Phone...)</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/hpe.png") }}" alt="Image linux"> <img src="{{ asset("img/icon/cisco.png") }}" alt="Image centos">
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class=" text-center ">
+            <div class="list-group-item list-group-item-action list-group-item-warning me-5  d-flex justify-content-center">
+                <h4>{{ "Development" }}</h4>
+            </div>
+            <div class="my-5">
+                <ul class="list-unstyled">
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Langages de programmation</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/c.png") }}" alt="Image c"> <img src="{{ asset("img/icon/java.png") }}" alt="Image java"> <img src="{{ asset("img/icon/js.png") }}" alt="Image js"> <img src="{{ asset("img/icon/php.png") }}" alt="Image php">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">WEB</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/html.png") }}" alt="Image html"> <img src="{{ asset("img/icon/css.png") }}" alt="Image css">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Frameworks</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/symfony.png") }}" alt="Image symfony"> <img src="{{ asset("img/icon/codenameone.png") }}" alt="Image codename">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Systèmes de gestion de base de données</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/oracle.png") }}" alt="Image oracle"> <img src="{{ asset("img/icon/mysql.jpg") }}" alt="Image mysql">
+                    </div>
+                    <li class="list-group-item list-group-item-action list-group-item-light fs-5">Modélisation UML</li>
+                    <div class="my-4">
+                        <img src="{{ asset("img/icon/uu.png") }}" alt="Image uml">
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
